@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>WatchPoint</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="pro1.css">
+    <script src="pro01.js"> </script>
+  
+    <!--BootStrap Needed-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body> 
+
+<nav class="navbar navbar-default" style="background-color: black">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="logo" href="https://www.visittampabay.com/tcc-homepage/">
+          <img src="src/logo.png" alt="TampaBay Logo" style="width:350px;height:105px;border:0;padding-left: 20px">
+        </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://www.visittampabay.com/tcc-homepage/" style="font-size:40px; font-family: 'Gill Sans MT'; padding-top: 40px; color:white">HOME</a></li>
+        <li><a href="https://www.visittampabay.com/things-to-do/" style="font-size:40px; font-family: 'Gill Sans MT'; padding-top: 40px; color: white">EXPLORE</a></li>
+        <li><a href="https://www.visittampabay.com/food-and-drink/" style="font-size:40px; font-family: 'Gill Sans MT'; padding-top: 40px; color:white">FOOD + DRINK</a></li>
+        <li><a href="https://www.visittampabay.com/tampa-events/" style="font-size:40px; font-family: 'Gill Sans MT'; padding-top: 40px; color:white">EVENTS</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <!-- Trigger the modal with a button -->
+<div id="panel" onmouseover="myFlip()">
+    <div class="mydivouter" id="here">
+    <h3 id="emergent">EMERGENCY IN EFFECT</h3>
+    <button type="button" class="mybuttonoverlap" id="myBtn">CLICK IMMEDIATELY</button>
+    </div>
+</div>
+<br>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      
+      <div class="item active">
+        <img src="src/01.jpg" alt="Tampa University">
+        <div class="carousel-caption">
+          <h3>Higher Education</h3>
+        </div>      
+      </div>
+
+      <div class="item">
+        <img src="src/02.jpg" alt="Downtown Tampa">
+        <div class="carousel-caption">
+          <h3>Business Centers</h3>
+        </div>      
+      </div>
+
+      <div class="item">
+          <img src="src/04.jpg" alt="Clearwater Beach">
+          <div class="carousel-caption">
+            <h3>Beautiful Beaches</h3>
+          </div>      
+        </div>
+
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+  
+<div class="container text-center">    
+  <h3>THINGS TO DO</h3><br>
+  <div class="row">
+    <div class="col-sm-4"><a href="https://buschgardens.com/tampa/">
+      <img src="src/bg.jpeg" class="img-responsive" style="width:100%" alt="Image"></a>
+      <p>ATTRACTIONS</p>
+    </div>
+    <div class="col-sm-4"><a href="http://yborcityonline.com/">
+      <img src="src/ybor.jpg" class="img-responsive" style="width:100%" alt="Image"></a>
+      <p>HISTORIC YBOR</p>    
+    </div>
+    <div class="col-sm-4">
+      <div class="well">
+       <p>Thrilling Rides, Family-Fun Shows, Animal Encounters </p>
+      </div>
+      <div class="well">
+       <p>Explore vintage shops, eclectic retail stores, and diverse restaurants</p>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+ <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header" style="padding:35px 50px;">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <img src="src/eas.png" style="width:250px;height:102px;border:0;text-align: center">
+            <h4>EMERGENCY ALERT SYSTEM</h4>
+            <h5>The Center for Disease Control Has Issued a Emergency Action Notification</h5>
+            <h5>Please Proceed With Extreme Caution</h5>
+            <h5>A Blood Born Pandemic is in Effect</h5>
+          </div>
+          <div class="modal-body" style="padding:40px 50px;">
+            <div style="text-align:center;font-weight: bold">SURVIVAL PROCEDURES</div>
+            <form id="myForm" role="form">
+              <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" step="1" class="form-control" id="age" placeholder="Age" min="6" max="200" required>
+              </div>
+              <div class="form-group">
+                <label for="party">Number of People you are Traveling With</label>
+                <input type="number" step="1" class="form-control" id="party" placeholder="Number of people in your party" min="1" max="100" required>
+                <br>
+                <button type="button" id="enter" class="btn btn-warning btn-block" >Enter</button>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer" style="text-align:center">
+            <button type="button" id="b1" onclick="clickB1()"> Take My Chances</button>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+      
+<footer class="container-fluid text-center">
+    <div class="row">
+    <img src="src/tampa.png"><p>
+    CopyRight Baillie 2019</p></div>
+</footer>
+  
+                    
+</body>
+<script>
+$(document).ready(function(){
+    $("#myBtn").click(function(){
+      $("#myModal").modal();
+    });
+  });
+</script>
+</html>
+</html>

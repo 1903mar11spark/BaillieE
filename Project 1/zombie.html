@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Zombie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="pro1.css">
+</head>
+<body id="zombBody">
+    <div> 
+    <br>
+    </div>
+        <div>
+            <img id="zola" src="src/zombie.jpg">
+                <audio id="zeebs">
+                    <source type="audio/mpeg" src="./src/b_horror.mp3">
+                </audio>
+        </div>
+    <div id="zombs">
+        <h1>There was no way to save you :(</h1>
+    </div>
+    <br>
+    </div> 
+</body>
+<script>
+
+    let image = document.getElementById("zola");
+    let out = document.getElementById("zombs");
+    let audio= document.getElementById("zeebs");
+
+
+image.onmouseenter = function() {
+    try{
+    audio.play();
+    } catch(e){
+        console.log(e)
+  }
+}
+out.onmouseover = function() {
+   audio.pause();
+}
+
+
+//need to sort
+</script>
+</html>

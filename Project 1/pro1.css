@@ -1,0 +1,188 @@
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* Beginning of other code  for modal*/
+  .modal-header, h4, .close {
+    background-color: red;
+    color:white !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  .modal-footer {
+    background-color: red;
+  }
+
+/*BOOTSTRAP IMAGES*/
+ .navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+
+  #myNavbar1 {
+    background-color: black;
+    text-size-adjust: auto;
+  }
+
+  .carousel-inner img {
+    width: 100%;
+    max-height: 600px;
+  }
+
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; 
+    }
+  }
+
+/* FOR THE HOVER OVER*/
+.mydivouter{
+    position:relative;
+    background: white;
+    width: 100%;
+    height: 75px;
+    margin: 0 auto;
+}
+.mydivoverlap{
+    position: center;
+    z-index: 1;
+}
+.mybuttonoverlap{
+    position: absolute;
+    z-index: 2;
+    left: 45%;
+    display: none;
+    	
+}
+.mydivouter:hover .mybuttonoverlap{ 
+    display:block;
+}
+
+#emergent {
+  text-align: center;
+  color: white;
+}
+
+#zola {
+  padding: 50px;
+  transition: transform .01s;
+  width: 600px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+#zola:hover {
+  transform: scale(1.5);
+}
+
+footer {
+  background-color: black;
+  padding: 25px;
+}
+h3 {
+  font-weight: bold;
+}
+
+h1 {
+color: white;
+}
+
+/* Other Pages*/
+ 
+#pfooter {
+  background-color: #f2f2f2;
+  padding: 25px;
+}
+
+.carousel-inner img {
+  width: 100%; 
+}
+
+h1,h2 {
+  text-align: center;
+}
+
+.centerme {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+iframe {
+height:100px;
+width:318px;
+border:none;
+}
+
+#p4css1 {
+text-align: center;
+}
+
+#code {
+height: 30px;
+width: 200px;
+}
+
+#otherList, #list {
+text-align: left;
+}
+
+#imagep4 {
+height: 610px;
+width: 650px;
+}
+
+.col-sm-12 {
+text-align: left;
+}
+
+#zombBody {
+  background-color: black;
+  text-align: center;
+}
+
+#pg2shelter {
+  text-align: center;
+  color:rgb(29, 26, 26);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+
