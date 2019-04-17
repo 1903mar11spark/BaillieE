@@ -45,14 +45,13 @@ window.onload = function(){
   
          .then(function(json) {
               console.log(json);  
-              for(let i = 0; i < json.results.length; i++) {
-                  for (let j = 0; j < json.results[i].products.length; j++){
+              for(let i = 0, j=0; i < json.results.length, j< json.results[i].products.length; i++, j++) {
                     let listItem = document.createElement('li');
                     listItem.innerHTML = '<strong>' + json.results[i].products[j].name_brand + '</strong>';
                   myList.appendChild(listItem);
                   }
-              }
-         })
+              })
+         
     
           .catch((error) =>{
               console.log(error);

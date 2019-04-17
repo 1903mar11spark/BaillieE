@@ -4,8 +4,20 @@ public class Car extends Vehicle implements Steerable{
 
 	public Car() {
 		super();
-		// TODO Auto-generated constructor stub
+		System.out.println("car noargs constructor completed");
 	}
+
+	private static final long serialVersionUID= 1L;
+
+	public Car(int topSpeed, int yearManufactured, String make, String model) {
+		super(topSpeed);
+		//super.gettopSpeed(); better to handle through the constructor
+		this.yearManufactured = yearManufactured;
+		this.make = make;
+		this.model = model;
+	}
+
+
 
 	public Car(int yearManufactured, String make, String model) {
 		super();
@@ -54,12 +66,14 @@ public class Car extends Vehicle implements Steerable{
 
 	@Override
 	public void turnRight() {
+		System.out.println("turning wheel clockwise");
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void turnLeft() {
+		System.out.println("turning wheel counterclockwise");
 		// TODO Auto-generated method stub
 		
 	}
