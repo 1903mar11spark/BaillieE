@@ -2,7 +2,6 @@ package com.revature.servlet;
 
 import java.io.IOException;
 
-import javax.security.auth.message.callback.PrivateKeyCallback.Request;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -20,14 +19,12 @@ public class CalculatorServlet extends HttpServlet {
      */
     public CalculatorServlet() {
         super();
- 
     }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
 		request.getRequestDispatcher("Calculator.html").forward(request, response);
 	}
 
@@ -42,41 +39,45 @@ public class CalculatorServlet extends HttpServlet {
 		
 		//define some variables
 		Double answer = 0.0;
-		String error = " ";
+		String error = "";
 		
-		if(paramN1 != null && paramN2 != null) {
-			Double n1 =	Double.parseDouble(paramN1);
-			Double n2 =	Double.parseDouble(paramN2);//warpper class
+		//null check
+		if (paramN1 != null && paramN2 != null) {
+			Double n1 = Double.parseDouble(paramN1);
+			Double n2 = Double.parseDouble(paramN2);
 			switch(operation) {
 			case "add":
 				answer = n1+n2;
 				break;
 			case "subtract":
-				answer = n1+n2;
+				answer = n1-n2;
 				break;
 			case "multiply":
 				answer = n1*n2;
 				break;
 			case "divide":
 				answer = n1/n2;
-				break;
+				break;	
 			default:
-				error = "invalid argument";
+				error = "invalid operation";
 			}
-		}else {
+		} else {
 			error = "please enter both operands";
 		}
-		//write to the response 
-		//response.getWriter().write("the answer is " + answer);
-		//include answer and error as attributes of the request an forward request to another
-		//and forward request to another
+		
+		
+		//write to the response
+		//response.getWriter().write("the answer is: " + answer);
+		
+		//include answer and error as attributes of the request
+		//and forward request to another servlet
 		request.setAttribute("answer", answer);
-		request.setAttribute("error", error );
+		request.setAttribute("error", error);
 		
 		RequestDispatcher rd = request.getRequestDispatcher("result");
 		rd.forward(request, response);
 		
 	}
-	
 
 }
+
