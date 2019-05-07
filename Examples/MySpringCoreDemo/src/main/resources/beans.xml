@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- THIS IS OUR "CONFIGURATION METADATA" -->
+	
+	<!-- register beans - allow Spring to manage lifecycle of our objects -->
+	<bean name="author" class="com.revature.beans.Author">
+	</bean>
+	<!-- Author is a dependency of Flashcard -->
+	<bean name="flashcard" class="com.revature.beans.Flashcard">
+		<property name="author" ref="author"></property> <!-- setter injection -->
+		<!-- Flashcard has a property "author" which references the mapped Spring bean "author" -->
+		<!--  Flashcard is set up to use setter injection -->
+	</bean>
+</beans>
